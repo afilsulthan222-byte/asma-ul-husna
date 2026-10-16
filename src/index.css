@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-emerald-deep: #064E3B;
+    --color-emerald-forest: #0B3D2E;
+    --color-emerald-dark: #03251C;
+    --color-midnight: #101410;
+    --color-midnight-card: #141A14;
+    --color-midnight-surface: #18221A;
+    --color-ivory: #F8F6EF;
+    --color-ivory-muted: #D8D4C5;
+    --color-gold-metallic: #D4AF37;
+    --color-gold-champagne: #E8D9A8;
+    --color-gold-bright: #F5E6B3;
+    --color-gold-dark: #997D29;
+  }
+
+  body {
+    background-color: #101410;
+    color: #F8F6EF;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Font Families */
+.font-arabic {
+  font-family: 'Amiri', 'Scheherazade New', 'Noto Naskh Arabic', 'Traditional Arabic', serif;
+}
+
+.font-tamil {
+  font-family: 'Noto Sans Tamil', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-title {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Islamic Geometric Background Pattern */
+.bg-islamic-pattern {
+  background-color: #101410;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(6, 78, 59, 0.25) 0%, transparent 60%),
+    radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(11, 61, 46, 0.3) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D4AF37' fill-opacity='0.04' fill-rule='evenodd'%3E%3Cpath d='M40 0l10 30h30l-25 18 10 32-25-19-25 19 10-32-25-18h30zM0 40l10 15h15l-12 9 5 16-13-10-13 10 5-16-12-9h15zM80 40l10 15h15l-12 9 5 16-13-10-13 10 5-16-12-9h15zM40 80l5 15h15l-12 9 4 16-12-10-12 10 4-16-12-9h15z'/%3E%3Ccircle cx='40' cy='40' r='12' fill='none' stroke='%23D4AF37' stroke-opacity='0.03' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.bg-emerald-gradient {
+  background: radial-gradient(circle at top center, rgba(6, 78, 59, 0.7) 0%, rgba(11, 61, 46, 0.5) 45%, #101410 100%);
+}
+
+.bg-card-gradient {
+  background: linear-gradient(145deg, rgba(20, 26, 20, 0.95) 0%, rgba(13, 20, 15, 0.85) 100%);
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #F5E6B3 0%, #D4AF37 50%, #997D29 100%);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF1C5 0%, #D4AF37 50%, #AA8222 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-emerald-gradient {
+  background: linear-gradient(135deg, #34D399 0%, #059669 50%, #064E3B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Islamic Ornamental Gold Borders */
+.gold-border {
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.05);
+}
+
+.gold-border-glow {
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.15), inset 0 0 15px rgba(212, 175, 55, 0.05);
+}
+
+.gold-frame {
+  position: relative;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.gold-frame::before,
+.gold-frame::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: #D4AF37;
+  pointer-events: none;
+}
+
+.gold-frame::before {
+  top: -2px;
+  left: -2px;
+  border-top: 2px solid #D4AF37;
+  border-left: 2px solid #D4AF37;
+}
+
+.gold-frame::after {
+  bottom: -2px;
+  right: -2px;
+  border-bottom: 2px solid #D4AF37;
+  border-right: 2px solid #D4AF37;
+}
+
+/* Quranic verse styling */
+.ayat-calligraphy {
+  line-height: 2.3;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7), 0 0 30px rgba(212, 175, 55, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #101410;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.6);
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
